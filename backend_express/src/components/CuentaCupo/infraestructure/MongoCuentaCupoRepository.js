@@ -27,7 +27,6 @@ class MongoCuentaRepository {
     return this.mongoDB.update(this.collection, id, entidad)
   }
   async getAllCoincident (id ) {
-    console.log(id)
     return this.mongoDB.getAllCoincident(this.collection, id)
   }
 }

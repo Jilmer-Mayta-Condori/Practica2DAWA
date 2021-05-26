@@ -10,9 +10,7 @@ const { UpdateBankAccountById } = require('../components/CuentaCupo/controller')
 const { GetAllCoincident } = require('../components/CuentaCupo/controller')
 const { AddMoneyBankAccount } = require('../components/CuentaCupo/controller')
 const { WithDrawMoneyBankAccount } = require('../components/CuentaCupo/controller')
-
-
-
+const { GetAllBalanceBankAccount} = require('../components/CuentaCupo/controller')
 
 const bodyParser = require('body-parser')
 
@@ -38,6 +36,8 @@ router.get('/apiBank/account/GetAllByIdEntity/:id', GetAllCoincident)
 router.put('/apiBank/account/addMoneyAccount', AddMoneyBankAccount)
 
 router.put('/apiBank/account/withdrawMoneyAccount', WithDrawMoneyBankAccount)
+
+router.get('/apiBank/account/getBalanceBankAccount/:id', GetAllBalanceBankAccount)
 
 router.use(express.json())
 

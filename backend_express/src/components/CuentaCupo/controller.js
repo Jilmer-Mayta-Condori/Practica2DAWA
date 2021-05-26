@@ -122,6 +122,30 @@ const WithDrawMoneyBankAccount = async (req, res, next) => {
   }
 }
 
+const GetAllBalanceBankAccount = async (req, res, next) => {
+  try {
+    console.log(req.params)
+    const query = GetAllAccount({ CuentaRepository })
+    const UniqueAccount = await query(req.params)
+    const Saldo = []
+
+    if (UniqueAccount) {
+      UniqueAccount.map((unico)=>{
+        const unique = {
+          cuenta: unico._id,
+          saldo: unico.saldo
+        }
+        Saldo.push(unique)
+      })
+      res.json(Saldo)
+    } else {
+      res.send('<h3>No cuentas con ninguna cuenta Cupo</h3>')
+    }
+  } catch (e) {
+    next(e)
+  }
+}
+
 module.exports = {
   createNewBankAccount,
   showAllBankAccount,
@@ -130,5 +154,6 @@ module.exports = {
   UpdateBankAccountById,
   GetAllCoincident,
   AddMoneyBankAccount,
-  WithDrawMoneyBankAccount
+  WithDrawMoneyBankAccount,
+  GetAllBalanceBankAccount
 }
