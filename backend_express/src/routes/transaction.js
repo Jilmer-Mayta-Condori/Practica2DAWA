@@ -7,6 +7,9 @@ const { showAllTransaction} = require('../components/Transacciones/controller')
 const { DeleteUniqueTransaction } = require('../components/Transacciones/controller')
 const { GetTransactionById } = require('../components/Transacciones/controller')
 const { UpdateTransactionById } = require('../components/Transacciones/controller')
+const { GetAllMyTransactions } = require('../components/Transacciones/controller')
+
+
 
 const bodyParser = require('body-parser')
 
@@ -26,6 +29,8 @@ router.delete('/apiTransaction/transaction/:id', DeleteUniqueTransaction)
 router.post('/apiTransaction/transaction', createNewTransaction)
 
 router.put('/apiTransaction/transaction', UpdateTransactionById)
+
+router.get('/apiTransaction/transaction/getAllMyTransaction/:id', GetAllMyTransactions)
 
 router.use(express.json())
 

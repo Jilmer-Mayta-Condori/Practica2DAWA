@@ -64,12 +64,22 @@ class MongoLib {
   }
 
   async getAllCoincident (collection, {id}, query = null) {
-    console.log(id)
     const db = await this.connect()
     query = query || {id_entidad: id }
-    console.log(query)
     return db.collection(collection).find(query).toArray()
   }
+
+  async getAllTransaction (collection, id, query = null) {
+    const db = await this.connect()
+    query = query || {id_entity_set: id }
+    return db.collection(collection).find(query).toArray()
+  }
+  async getAllTransactionGet (collection, id, query = null) {
+    const db = await this.connect()
+    query = query || {id_entity_get: id }
+    return db.collection(collection).find(query).toArray()
+  }
+
 }
 
 module.exports = MongoLib

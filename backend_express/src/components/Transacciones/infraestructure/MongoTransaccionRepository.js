@@ -28,6 +28,14 @@ class MongoTransactionRepository {
     return this.mongoDB.update(this.collection, id, transaccion)
   }
 
+  async getAllTransaction ({id}){
+    return this.mongoDB.getAllTransaction(this.collection, id)
+  }
+
+  async getAllTransactionGet ({id}){
+    return this.mongoDB.getAllTransactionGet(this.collection, id)
+  }
+
 }
 
 module.exports = MongoTransactionRepository
