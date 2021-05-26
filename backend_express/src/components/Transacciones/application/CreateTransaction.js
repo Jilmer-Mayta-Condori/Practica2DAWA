@@ -3,12 +3,13 @@
  * @param {import('../infraestructure/MongoTransaccionRepository')} obj.TransactiondRepository
  */
  module.exports = ({ TransactiondRepository }) => {
-    return async ({ id_entity_set, id_entity_get, amount, date}) => {
+    const today = new Date()
+    return async ({ id_entity_set, id_entity_get, amount}) => {
       const newTransaction = {
         id_entity_set: id_entity_set,
         id_entity_get: id_entity_get,
         amount: amount,
-        date: date
+        date: today
       }
       return await TransactiondRepository.add(newTransaction)
     }
