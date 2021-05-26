@@ -1,25 +1,26 @@
-import React, { Component } from 'react'
-import '../styles/Inicio.css'
+import React from 'react'
 
-class InicioComponent extends Component{
-    render(){
-        return(
-          <div>
-            <h1 style={{textAlign: 'center', fontSize: '2rem', marginTop: '30px'}}>Bienvenido a mi App de Contactos</h1>
-            <div class="buttons">
-            <div class="containerInicioComponent">
-                <p>Agregar un nuevo Contacto en la agenda</p>
-                <a href="/formulario" class="btn effect01" ><span>Crear Contacto</span></a>
+const InicioComponent = () => {
+    return(
+      <div>
+        <h1 style={{textAlign: 'center', fontSize: '2rem', marginTop: '30px'}}>Bienvenido a mi App de Contactos</h1>
+        <div className="buttons">
+        <div className="containerInicioComponent">
+            <p>Crear Entidad</p>
+            <a href="/formSigInEntity" className="btn effect01" ><span>Sing Up Entidad</span></a>
 
-                <p>Listar todos mis Contactos</p>
-                <a href="/listar" class="btn effect01" ><span>Mostrar Contactos</span></a>
+            <p>Logearme con mi entidad</p>
+            <a href="/formLoginEntity" className="btn effect01" ><span>Sing In Entity</span></a>
 
-            </div>
-          </div>
+            <p>Sing In Entity</p>
+            <a href="/listar" className="btn effect01" ><span>Mostrar Entitys</span></a>
+
         </div>
-        
-        );
-    }
+      </div>
+    </div>
+    
+    );
+
 }
 
 export default InicioComponent

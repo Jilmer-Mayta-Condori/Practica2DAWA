@@ -29,20 +29,7 @@ router.post('/api/entidad', createNewEntity)
 
 router.put('/api/entidad', UpdateById)
 
-router.get('/form', (request, response) => {
-  response.send('<h1>Bienvenidos a mi formulario con NODEJS</h1>' +
-   '<form method="POST" action="/api/personas">' +
-   '  <label>Nombre</label><br/>' +
-   '    <input type="text" name="nombre"> <br/><br/>' +
-   '  <label>Documento de Identidad</label><br/>' +
-   '    <input type="text" name="documento"> <br/><br/>' +
-   '  <label>Correo</label><br/>' +
-   '    <input type="text" name="correo"> <br/><br/>' +
-   '  <label>Telefono</label><br/>' +
-   '    <input type="text" name="numero"> <br/><br/>' +
-   '  <button type="submit">Enviar</button>' +
-   '</form>')
-})
+router.get('/api/entidad/abrirCuentaBancaria')
 
 router.use(express.json())
 

@@ -7,6 +7,8 @@ const { showAllBankAccount } = require('../components/CuentaCupo/controller')
 const { DeleteUniqueBankAccount } = require('../components/CuentaCupo/controller')
 const { GetBankAccountById} = require('../components/CuentaCupo/controller')
 const { UpdateBankAccountById } = require('../components/CuentaCupo/controller')
+const { GetAllCoincident } = require('../components/CuentaCupo/controller')
+
 
 const bodyParser = require('body-parser')
 
@@ -26,6 +28,8 @@ router.delete('/apiBank/account/:id', DeleteUniqueBankAccount)
 router.post('/apiBank/account', createNewBankAccount)
 
 router.put('/apiBank/account', UpdateBankAccountById)
+
+router.get('/apiBank/account/GetAllByIdEntity/:id', GetAllCoincident)
 
 router.use(express.json())
 

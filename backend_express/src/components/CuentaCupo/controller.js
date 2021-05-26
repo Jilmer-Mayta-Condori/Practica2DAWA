@@ -4,6 +4,7 @@ const ShowAllAccount = require('./application/ShowAllCuenta')
 const DeleteAccount = require('./application/DeleteCuenta')
 const GetAccount = require('./application/GetCuenta')
 const UpdateAccount = require('./application/UpdateCuenta')
+const GetAllAccount = require('./application/GetCoincidentIdEntidad')
 
 const CuentaRepository = new MongoCuentaCupoRepository()
 /**
@@ -72,10 +73,26 @@ const UpdateBankAccountById = async (req, res, next) => {
   }
 }
 
+const GetAllCoincident = async (req, res, next) => {
+  try {
+    console.log(req.params)
+    const query = GetAllAccount({ CuentaRepository })
+    const UniqueAccount = await query(req.params)
+    if (UniqueAccount) {
+      res.json(UniqueAccount)
+    } else {
+      res.send('<h3>no existe Cuenta con el id enviado</h3>')
+    }
+  } catch (e) {
+    next(e)
+  }
+}
+
 module.exports = {
   createNewBankAccount,
   showAllBankAccount,
   DeleteUniqueBankAccount,
   GetBankAccountById,
-  UpdateBankAccountById
+  UpdateBankAccountById,
+  GetAllCoincident
 }

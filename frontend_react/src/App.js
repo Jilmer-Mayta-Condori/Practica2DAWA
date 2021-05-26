@@ -5,17 +5,21 @@ import {
   Route
 } from "react-router-dom";
 import ShowAllComponent from "./components/ShowAllComponent";
-import formularioComponent from "./components/formularioComponent"
+import CreateEntityComponent from "./components/CreateEntityComponent"
 import InicioComponent from "./components/InicioComponent"
+import FormLoginEntity from "./components/FormLoginEntity"
+import WelcomeEntity from "./components/WelcomeEntity"
 
 export default function App() {
   return (
     <div>     
     <Router>
         <Switch>
-          <Route path="/listar" component={ShowAllComponent}/>
-          <Route path="/formulario" component={formularioComponent}/>
           <Route path="/" component={InicioComponent}/>
+          <Route path="/listar" component={ShowAllComponent}/>
+          <Route path="/formSigInEntity" component={CreateEntityComponent}/>
+          <Route path="/formLoginEntity" component={FormLoginEntity}/>
+          <Route path="/welcomeEntity" component={WelcomeEntity}/>
         </Switch>
     </Router>
     </div>

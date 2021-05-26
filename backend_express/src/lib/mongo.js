@@ -40,6 +40,7 @@ class MongoLib {
   async get (collection, id, query = null) {
     const db = await this.connect()
     query = query || { _id: ObjectId(id) }
+    console.log(query)
     return db.collection(collection).findOne(query)
   }
 
@@ -60,6 +61,14 @@ class MongoLib {
     const db = await this.connect()
     await db.collection(collection).deleteOne({ _id: ObjectId(id) })
     return id
+  }
+
+  async getAllCoincident (collection, {id}, query = null) {
+    console.log(id)
+    const db = await this.connect()
+    query = query || {id_entidad: id }
+    console.log(query)
+    return db.collection(collection).find(query).toArray()
   }
 }
 

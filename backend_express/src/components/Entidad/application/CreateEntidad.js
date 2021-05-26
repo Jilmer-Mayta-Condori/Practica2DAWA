@@ -10,6 +10,8 @@ module.exports = ({ EntidadRepository }) => {
       mail: mail,
       password: password,
       identity_document: identity_document
+      // cuentas_cupo: [],
+      // transacciones: []
     }
 
     return await EntidadRepository.add(newEntity)

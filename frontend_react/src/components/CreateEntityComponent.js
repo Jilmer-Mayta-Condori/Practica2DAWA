@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const FormularioComponent = props => {
+const CreateEntityComponent = props => {
 
     let history = useHistory();
 
@@ -30,10 +30,10 @@ const FormularioComponent = props => {
             setCorreo('')
             setDocumento('')
             setContraseña('')
-            window.alert(`Contacto fue creado exitosamente a la agenda`);
+            window.alert(`Su entidad fue creada exitosamente`);
             history.push('/listar')
         }).catch((error)=>{
-            console.log("Contacto No CReado");
+            console.log("Entidad No CReado");
             console.log(error.toString());
         });
 
@@ -101,4 +101,4 @@ const FormularioComponent = props => {
 
 }
 
-export default FormularioComponent
+export default CreateEntityComponent
