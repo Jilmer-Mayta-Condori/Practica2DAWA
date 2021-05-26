@@ -160,7 +160,8 @@ const GetTotalAmountBankAccount = async (req, res, next) => {
         
       })
       const unique = {
-        saldoTotal: total
+        id_entidad: req.params.id,
+        saldo: total
       }
       Saldo.push(unique)
       res.json(Saldo)
