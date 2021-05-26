@@ -1,0 +1,86 @@
+POST   http://localhost:3000/api/entidad HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "name": "La Cabaña",
+    "number": "985641321",
+    "mail": "laCabaña@gmail.com",
+    "password": "236541",
+    "identity_document": "845412454"
+}
+
+###
+POST   http://localhost:3000/api/entidad HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "name": "Pezcadores",
+    "number": "985641321",
+    "mail": "pezcadores@gmail.com",
+    "password": "236541",
+    "identity_document": "845412454"
+}
+
+###
+
+POST   http://localhost:3000/api/entidad HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "name": "Tecsup",
+    "number": "985641321",
+    "mail": "tecsup.sur@gmail.com",
+    "password": "236541",
+    "identity_document": "845412454"
+}
+
+###
+
+POST   http://localhost:3000/api/entidad HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "name": "Jilmer Mayta",
+    "number": "985641321",
+    "mail": "jilmer.mayta@gmail.com",
+    "password": "236541",
+    "identity_document": "845412454"
+}
+
+###
+
+POST   http://localhost:3000/api/entidad HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "name": "Josue Paredes",
+    "number": "985641321",
+    "mail": "josue123@gmail.com",
+    "password": "236541",
+    "identity_document": "845412454"
+}
+
+###
+
+POST   http://localhost:3000/api/entidad HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "name": "Petro Peru",
+    "number": "985641321",
+    "mail": "petroPeru@gmail.com",
+    "password": "236541",
+    "identity_document": "845412454"
+}
+
+###
+
+# Para obtener los _id y poder crear las cuentas cupo
+GET   http://localhost:3000/api/entidad HTTP/1.1
+

@@ -1,0 +1,48 @@
+POST   http://localhost:3000/apiBank/account   HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_entidad": "60adb8d959fabf835cd7b8f5",
+    "saldo": "4000",
+    "tipo_cambio": "Dolares"
+}
+
+###
+POST   http://localhost:3000/apiBank/account   HTTP/1.1
+
+Content-Type: application/json
+{
+    "id_entidad": "60adb8d959fabf835cd7b8f5",
+    "saldo": "50000",
+    "tipo_cambio": "Soles"
+}
+
+###
+POST   http://localhost:3000/apiBank/account   HTTP/1.1
+
+Content-Type: application/json
+{
+    "id_entidad": "60adb8d959fabf835cd7b8f5",
+    "saldo": "50000000",
+    "tipo_cambio": "Soles"
+}
+
+###
+POST   http://localhost:3000/apiBank/account   HTTP/1.1
+
+Content-Type: application/json
+{
+    "id_entidad": "60addd26734549910d51da80",
+    "saldo": 0,
+    "tipo_cambio": "Dolares"
+}
+
+###
+POST   http://localhost:3000/apiBank/account   HTTP/1.1
+
+Content-Type: application/json
+{
+    "id_entidad": "60addd26734549910d51da80",
+    "saldo": 5310,
+    "tipo_cambio": "Soles"
+}

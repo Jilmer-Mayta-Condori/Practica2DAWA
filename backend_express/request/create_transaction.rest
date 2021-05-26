@@ -1,0 +1,59 @@
+POST   http://localhost:3000/apiTransaction/transaction  HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_entity_set": "60adb8d959fabf835cd7b8f5",
+    "id_entity_get": "60adce99a65fa18eff852788",
+    "amount": 400,
+    "date": "2021-05-26T15:52:28.541Z"
+}
+
+###
+POST   http://localhost:3000/apiTransaction/transaction  HTTP/1.1
+Content-Type: application/json
+{
+    "id_entity_set": "60adb8d959fabf835cd7b8f5",
+    "id_entity_get": "60adce99a65fa18eff852788",
+    "amount": 6000,
+    "date": "2021-05-26T15:52:28.541Z"
+}
+
+###
+POST   http://localhost:3000/apiTransaction/transaction  HTTP/1.1
+Content-Type: application/json
+{
+    "id_entity_set": "60adb8d959fabf835cd7b8f5",
+    "id_entity_get": "60addd26734549910d51da80",
+    "amount": 500,
+    "date": "2021-05-26T15:52:28.541Z"
+}
+
+###
+POST   http://localhost:3000/apiTransaction/transaction  HTTP/1.1
+Content-Type: application/json
+{
+    "id_entity_set": "60addcfd734549910d51da7f",
+    "id_entity_get": "60addd26734549910d51da80",
+    "amount": 1500,
+    "date": "2021-05-26T16:21:00.789Z"
+}
+
+###
+POST   http://localhost:3000/apiTransaction/transaction  HTTP/1.1
+Content-Type: application/json
+{
+    "id_entity_set": "60addd26734549910d51da80",
+    "id_entity_get": "60adce99a65fa18eff852788",
+    "amount": 1500,
+    "date": "2021-05-26T16:42:08.822Z"
+}
+
+###
+POST   http://localhost:3000/apiTransaction/transaction  HTTP/1.1
+Content-Type: application/json
+{
+    "id_entity_set": "60addd26734549910d51da80",
+    "id_entity_get": "60addcc3734549910d51da7d",
+    "amount": 1500,
+    "date": "2021-05-26T16:43:31.270Z"
+}
