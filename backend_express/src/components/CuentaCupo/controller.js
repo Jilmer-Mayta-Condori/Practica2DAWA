@@ -5,6 +5,8 @@ const DeleteAccount = require('./application/DeleteCuenta')
 const GetAccount = require('./application/GetCuenta')
 const UpdateAccount = require('./application/UpdateCuenta')
 const GetAllAccount = require('./application/GetCoincidentIdEntidad')
+const AddMoneyAccount = require('./application/AddMoneyAccount')
+const WithdrawMoneyAccount = require('./application/WithdrawMoneyAccount')
 
 const CuentaRepository = new MongoCuentaCupoRepository()
 /**
@@ -88,11 +90,45 @@ const GetAllCoincident = async (req, res, next) => {
   }
 }
 
+const AddMoneyBankAccount = async (req, res, next) => {
+  try {
+    const querygetById = GetAccount({ CuentaRepository })
+    const UniqueAccount = await querygetById(req.body)
+    const query = AddMoneyAccount({ CuentaRepository })
+    const AddMoney = await query(req.body, UniqueAccount)
+    if (AddMoney) {
+      res.json(AddMoney)
+    } else {
+      res.send('<h3>error en el abonado/h3>')
+    }
+  } catch (e) {
+    next(e)
+  }
+}
+
+const WithDrawMoneyBankAccount = async (req, res, next) => {
+  try {
+    const querygetById = GetAccount({ CuentaRepository })
+    const UniqueAccount = await querygetById(req.body)
+    const query = WithdrawMoneyAccount({ CuentaRepository })
+    const WithDrawMoney = await query(req.body, UniqueAccount)
+    if (WithDrawMoney) {
+      res.json(WithDrawMoney)
+    } else {
+      res.send('<h3>error en el retiro</h3>')
+    }
+  } catch (e) {
+    next(e)
+  }
+}
+
 module.exports = {
   createNewBankAccount,
   showAllBankAccount,
   DeleteUniqueBankAccount,
   GetBankAccountById,
   UpdateBankAccountById,
-  GetAllCoincident
+  GetAllCoincident,
+  AddMoneyBankAccount,
+  WithDrawMoneyBankAccount
 }
